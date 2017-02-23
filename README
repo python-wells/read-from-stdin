@@ -1,0 +1,12 @@
+* COMMENT -*- mode: org -*-
+#+Date: 2017-02-23
+Time-stamp: <2017-02-23>
+
+** When a python program support reading from stdin, it can accept input from
+stdin redirect or shell pipes. For example:
+
+    python main.py < /path/to/foo.txt
+    cat /path/to/foo.txt | python main.py
+
+sys.stdin is a file like object, usually you process line by line via
+readline() call. You can also read it all though.
